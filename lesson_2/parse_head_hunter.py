@@ -1,3 +1,4 @@
+import json
 import time
 from pprint import pprint
 import asyncio
@@ -75,7 +76,9 @@ def main():
     text = input('Введите желаемую вакансию: ')
     loop.run_until_complete(gather_data(text=text))
     # Получаемые данные
-    pprint(vacancy_data)
+    with open('vacancy.json', 'w', encoding='utf-8') as f:
+        json.dump(vacancy_data, f, ensure_ascii=False)
+    print('Loading is done')
 
 
 if __name__ == '__main__':
