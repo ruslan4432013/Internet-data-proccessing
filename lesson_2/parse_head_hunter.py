@@ -1,7 +1,5 @@
 import time
 from pprint import pprint
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import asyncio
 import aiohttp
 from bs4 import BeautifulSoup
