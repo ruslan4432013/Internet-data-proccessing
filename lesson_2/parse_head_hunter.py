@@ -47,14 +47,14 @@ async def get_page_data(session, page, text):
                     currency = price[0][-1] if len(price) == 1 else price[1][-1]
                     payment = {'currency': currency}
                     if 'от' in price[0]:
-                        payment['min_pay'] = list(filter(lambda x: x.isdigit(), price[0]))[0]
+                        payment['min_pay'] = int(list(filter(lambda x: x.isdigit(), price[0]))[0])
                         payment['max_pay'] = 'Not specified'
                     elif 'до' in price[0]:
                         payment['min_pay'] = 'Not specified'
-                        payment['max_pay'] = list(filter(lambda x: x.isdigit(), price[0]))[0]
+                        payment['max_pay'] = int(list(filter(lambda x: x.isdigit(), price[0]))[0])
                     elif len(price) == 2:
-                        payment['min_pay'] = price[0][0]
-                        payment['max_pay'] = price[1][0]
+                        payment['min_pay'] = int(price[0][0])
+                        payment['max_pay'] = int(price[1][0])
                 else:
                     payment = {'min_pay': 'Not specified', 'currency': 'Not specified', 'max_pay': 'Not specified'}
                 vacancy_info = {'title': title,
