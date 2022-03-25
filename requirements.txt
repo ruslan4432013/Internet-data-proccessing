@@ -6,6 +6,7 @@ async-timeout==4.0.2
 asyncbs4==1.0.4
 asyncio==3.4.3
 attrs==21.4.0
+author==0.0.0.0.dev20200926
 Automat==20.2.0
 beautifulsoup4==4.10.0
 bs4==0.0.1
@@ -35,6 +36,7 @@ mongo==0.2.0
 multidict==6.0.2
 outcome==1.1.0
 parsel==1.6.0
+Pillow==9.0.1
 Protego==0.2.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
